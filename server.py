@@ -1,6 +1,8 @@
 #!/usr/bin/python
 from settings import constants
 from settings import server_config
+import roulette
+
 from flask import Flask
 from flask import render_template
 app = Flask(__name__)
@@ -13,7 +15,7 @@ def hello():
 
 @app.route(api_endpoint + "games-under/<int:dollars>")
 def get_games(dollars):
-	return str(dollars)
+	return roulette.play(dollars)
 
 if __name__ == "__main__":
     app.run(
