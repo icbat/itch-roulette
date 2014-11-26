@@ -1,32 +1,19 @@
-<html>
-<head>
-	<title>itch-roulette - Buy random games!</title>
-	<link rel="stylesheet" href="/static/style.css" />
-	<link href='http://fonts.googleapis.com/css?family=Lato:900' rel='stylesheet' type='text/css'>
-</head>
+{% extends "layout.html" %}
+{% block body %}
+<div id="content">
+Press a button to get a random assortment of games from <a href="https://itch.io">itch.io</a>!
+<div class="important">
+	You will not be charged until you've been redirected to itch!
+</div>
 
-<body>
-	<header>
-		<h1>Itch Roulette</h1>
-	</header>
-	<div id="content">
-		Press a button to get a random assortment of games from <a href="https://itch.io">itch.io</a>!
-
-		<div class="important">
-			You will not be charged until you've been redirected to itch!
-		</div>
-
-		<form action="/api/v1/games-under/5" method="get">
-			<input value="I want to spend $5 on cool games!" type="submit" class="button" />
-		</form>
-		<form action="/api/v1/games-under/10" method="get">
-			<input value="I want to spend $10 on cool games!" type="submit" class="button" />
-		</form>
-		<form action="/api/v1/games-under/20" method="get">
-			<input value="I want to spend $20 on cool games!" type="submit" class="button" />
-		</form>
-	</div>
-	<footer>
-		Code on <a href="https://github.com/icbat/itch-roulette">GitHub</a>.  Made with <3 by <a href="https://www.twitter.com/icbat">@icbat</a>
-	</footer>
-</body>
+<form action="/api/v1/games-under/5" method="get">
+	<input value="I want to spend $5 on cool games!" type="submit" class="button" />
+</form>
+<form action="/api/v1/games-under/10" method="get">
+	<input value="I want to spend $10 on cool games!" type="submit" class="button" />
+</form>
+<form action="/api/v1/games-under/20" method="get">
+	<input value="I want to spend $20 on cool games!" type="submit" class="button" />
+</form>
+</div>
+{% endblock %}
