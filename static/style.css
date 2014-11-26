@@ -33,7 +33,7 @@ header, footer , header a, header a:visited{
 	color: #fff;
 	padding: 10px;
 	font-size: 2em;
-	min-width: 75%;
+	width: 315px;
 	font-family: 'Lato', sans-serif;
 }
 
