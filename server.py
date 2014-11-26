@@ -15,7 +15,6 @@ def hello():
 
 @app.route(api_endpoint + "games-under/<int:dollars>")
 def get_games(dollars):
-	print "passing to roulette: play"
 	return roulette.play(dollars) 
 
 if __name__ == "__main__":
