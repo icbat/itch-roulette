@@ -12,16 +12,4 @@ def play(dollars):
 			current_sum += float(game.price)
 
 
-	return convert_for_display(games_to_buy)
-
-""" Takes a list of games and formats it for web display """
-def convert_for_display(games):
-	string = ""
-	for game in games:
-		string += str(game.price)
-		string += " : "
-		string += game.user
-		string += " : "
-		string += game.name
-		string += "<br/>"
-	return string
+	return games_to_buy

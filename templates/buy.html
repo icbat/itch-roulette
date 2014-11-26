@@ -1,0 +1,33 @@
+<html>
+<head>
+	<title>itch-roulette - Buy random games!</title>
+	<link rel="stylesheet" href="/static/style.css" />
+	<link href='http://fonts.googleapis.com/css?family=Lato:900' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+	<header>
+		<h1>Itch Roulette</h1>
+	</header>
+	<div id="content">
+		<div class="important">Here's a bunch of games. Altogether, they're less than the price you asked for!</div>
+		{% for game in games %}
+		<div>
+			<button id="buy_{{ game.name }}_button" class="button">Buy a game on itch.io!</button>
+		</div>
+		{% endfor %}
+		Don't like these games? Just refresh the page for more!
+	</div>
+	<footer>
+		Code on <a href="https://github.com/icbat/itch-roulette">GitHub</a>.  Made with <3 by <a href="https://www.twitter.com/icbat">@icbat</a>
+	</footer>
+	<script type="text/javascript" src="http://static.itch.io/api.js"></script>
+	<script type="text/javascript">
+		{% for game in games %}
+  		Itch.attachBuyButton(document.getElementById("buy_{{game.name}}_button"), {	
+    		user: "{{game.user}}",
+    		game: "{{game.name}}"
+  		});
+  		{% endfor %}
+	</script>
+</body>
