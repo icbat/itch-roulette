@@ -1,14 +1,15 @@
 {% extends "layout.html" %}
 {% block body %}
-<<div id="content">
-		<div class="important">Here's a bunch of games. Altogether, they're less than the price you asked for!</div>
+<div id="content">
+	<div class="important">Here's a bunch of games. Altogether, they're less than the price you asked for!</div>
 		{% for game in games %}
-		<div>
-			<button id="buy_{{ game.name }}_button" class="button">Buy a game on itch.io!</button>
+		<div class="game">
+			<button id="buy_{{ game.name }}_button" class="button">Buy {{ game.display_name }} itch.io!</button><br/>
+			<img src="{{ game.image_url }}" alt="game image for {{game.display_name}}" />
 		</div>
 		{% endfor %}
 		Don't like these games? Just refresh the page for more!
-	</div>
+	</div>	
 	<script type="text/javascript" src="/static/itch.js"></script>
 	<script type="text/javascript">
 		{% for game in games %}
