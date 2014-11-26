@@ -4,7 +4,15 @@ import random
 def play(dollars):
 	games = itch_interface.get_games()
 	random.shuffle(games)
-	return convert_for_display(games)
+	current_sum = 0
+	games_to_buy = []
+	for game in games:
+		if float(game.price) + current_sum < dollars:
+			games_to_buy.append(game)
+			current_sum += float(game.price)
+
+
+	return convert_for_display(games_to_buy)
 
 """ Takes a list of games and formats it for web display """
 def convert_for_display(games):
