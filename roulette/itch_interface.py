@@ -20,9 +20,11 @@ def parse_xml(page):
 		user = parse_user(link)
 		name = parse_game_name(link)
 		currency = parse_one_value(item, "currency")
+		display_name = parse_one_value(item, "plainTitle")
+		image_url = parse_one_value(item, "imageurl")
 		price = parse_one_value(item, "price")[1:]
 		if (currency == 'USD'):
-			games_found.append(Game(user, name, currency, price))
+			games_found.append(Game(user, name, currency, price, display_name, image_url))
 	return games_found	
 
 def parse_one_value(element, tag):
