@@ -15,7 +15,7 @@ def hello():
 
 @app.route(api_endpoint + "games-under/<int:dollars>")
 def get_games(dollars):
-	return roulette.play(dollars) 
+	return render_template("buy.html", games=roulette.play(dollars))
 
 if __name__ == "__main__":
     app.run(
