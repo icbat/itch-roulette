@@ -9,7 +9,7 @@
 		{% endfor %}
 		Don't like these games? Just refresh the page for more!
 	</div>
-	<script type="text/javascript" src="http://static.itch.io/api.js"></script>
+	<script type="text/javascript" src="/static/itch.js"></script>
 	<script type="text/javascript">
 		{% for game in games %}
   		Itch.attachBuyButton(document.getElementById("buy_{{game.name}}_button"), {	
