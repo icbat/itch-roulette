@@ -1,4 +1,11 @@
 import itch_interface
-""" TODO better docs:  The high level concept of the program """
+
 def play(dollars):
-	return itch_interface.get_games()
+	games = itch_interface.get_games()
+	string = ""
+	for game in games:
+		string += str(game.price)
+		string += " : "
+		string += game.link		
+		string += "<br/>"
+	return string
