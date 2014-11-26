@@ -2,6 +2,8 @@ import urllib2
 import xml.etree.ElementTree as ET
 from game import Game
 
+prefix_length = len("https://") - 1
+
 def get_games():
 	return get_games_from_url("https://itch.io/games/price-500.xml")
 
@@ -27,9 +29,9 @@ def parse_one_value(element, tag):
 	return element.findall(tag)[0].text
 
 def parse_user(url):
-	domain_index = url.find(".itch.io")
-	prefix_length = len("https://") - 1
+	domain_index = url.find(".itch.io")	
 	return url[prefix_length:domain_index]
 
 def parse_game_name(url):
-	return ""
+	end_of_domain = url[prefix_length:].find("/") + 1
+	return url[prefix_length + end_of_domain:]
