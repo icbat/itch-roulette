@@ -1,5 +1,6 @@
 class Game:
-	def __init__(self, link, currency, price):
-		self.link = link
+	def __init__(self, user, name, currency, price):
+		self.user = user
+		self.name = name
 		self.currency = currency
 		self.price = price
