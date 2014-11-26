@@ -33,7 +33,7 @@ header, footer , header a, header a:visited{
 	color: #fff;
 	padding: 10px;
 	font-size: 2em;
-	width: 315px;
+	width: 75%;
 	font-family: 'Lato', sans-serif;
 }
 
@@ -51,4 +51,8 @@ header, footer , header a, header a:visited{
 .game {
 	padding-top: 10px;
 	padding-bottom: 15px;
+}
+
+.game .button {
+	width: 315px;
 }
