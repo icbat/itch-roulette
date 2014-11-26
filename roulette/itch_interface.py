@@ -15,11 +15,21 @@ def parse_xml(page):
 	root = ET.fromstring(raw_xml)
 	for item in root.findall('item'):
 		link = parse_one_value(item, "link")
+		user = parse_user(link)
+		name = parse_game_name(link)
 		currency = parse_one_value(item, "currency")
 		price = parse_one_value(item, "price")[1:]
 		if (currency == 'USD'):
-			games_found.append(Game(link, currency, price))
+			games_found.append(Game(user, name, currency, price))
 	return games_found	
 
 def parse_one_value(element, tag):
 	return element.findall(tag)[0].text
+
+def parse_user(url):
+	domain_index = url.find(".itch.io")
+	prefix_length = len("https://") - 1
+	return url[prefix_length:domain_index]
+
+def parse_game_name(url):
+	return ""

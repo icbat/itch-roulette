@@ -20,6 +20,6 @@ def convert_for_display(games):
 	for game in games:
 		string += str(game.price)
 		string += " : "
-		string += game.link		
+		string += game.user		
 		string += "<br/>"
 	return string
