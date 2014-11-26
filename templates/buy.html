@@ -3,7 +3,7 @@
 <div id="content">
 	<div class="important">Here's a bunch of games. Altogether, they're less than the price you asked for!</div>
 		{% for game in games %}
-		<div>
+		<div class="game">
 			<button id="buy_{{ game.name }}_button" class="button">Buy {{ game.display_name }} itch.io!</button><br/>
 			<img src="{{ game.image_url }}" alt="game image for {{game.display_name}}" />
 		</div>
