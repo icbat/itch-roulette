@@ -5,7 +5,10 @@ from game import Game
 prefix_length = len("https://") - 1
 
 sources = [
-"https://itch.io/games/price-500.xml"
+"https://itch.io/games/price-500.xml",
+"https://itch.io/games/price-1500.xml",
+"https://itch.io/games/price-sale.xml",
+"https://itch.io/games/price-paid.xml",
 ]
 
 def get_games():
