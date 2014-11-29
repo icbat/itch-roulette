@@ -15,7 +15,20 @@ def get_games():
 	games = []
 	for source in sources:
 		games += get_games_from_url(source)
-	return games
+	return remove_duplicates(games)
+
+def remove_duplicates(games):
+	trimmed = []
+	for game in games:
+		duplicate = False
+		for final_game in trimmed:
+			if final_game.name == game.name and final_game.user == game.user:
+				duplicate = True
+
+		if not duplicate:
+			trimmed.append(game)
+
+	return trimmed
 
 def get_games_from_url(url):
 	page = urllib2.urlopen(url)
