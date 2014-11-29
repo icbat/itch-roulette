@@ -12,3 +12,7 @@ To test locally:
 2. `pip install -r requirements.txt`
 3. `python server.py`
 4. Go to localhost:5000
+
+## Python versions
+
+Right now, this is only compatible with python 2.x thanks to the use of urllib2. To make this usable with Python 3.x, the first step will be to replace these dependencies by using the [2to3](https://docs.python.org/2/glossary.html#term-to3) tool 
