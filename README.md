@@ -1,6 +1,8 @@
 scratch.io
 ==========
 
+[![Build Status](https://travis-ci.org/icbat/itch-roulette.svg?branch=master)](https://travis-ci.org/icbat/itch-roulette)
+
 A roulette-type system for itch.io
 
 
