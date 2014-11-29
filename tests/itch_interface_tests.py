@@ -17,21 +17,24 @@ def test_remove_duplicates_happy():
 	assert len(trimmed) == 1
 	assert trimmed[0].user == "icbat"
 
-def test_remove_duplicates_no_work():
+def test_remove_duplicates_has_no_work():
 	games = []
 	first_game = Game("icbat", "pressing", "some currency", "1234", "display_name", "image url")
 	second_game = Game("someone else", "a better game", "a different currency", "4567", "disp", "url")
+	third_game = Game("icbat", "a better game", "a different currency", "4567", "disp", "url")
 	games.append(first_game)
 	games.append(second_game)
-	assert len(games) == 2
+	games.append(third_game)
+	assert len(games) == 3
 
 	trimmed = itch_interface.remove_duplicates(games)
 
 	# assert no side-effects
-	assert len(games) == 2
-	assert len(trimmed) == 2
+	assert len(games) == 3
+	assert len(trimmed) == 3
 	assert trimmed[0].user == "icbat"
 	assert trimmed[1].user == "someone else"
+	assert trimmed[2].user == "icbat"
 
 def test_parse_xml_happy():
 	xml = """
