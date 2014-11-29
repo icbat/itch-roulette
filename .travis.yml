@@ -9,4 +9,4 @@ deploy:
   api_key:
     secure: Z9Kc0aUQzqE7qZWDQWe2qEFRcJ3kq/+YO08JSJdBO4kL5eyc+b+BOqyk6JvTMzBd4BjlEpYhV5ijz1mOINO3+8OKk7wZgeKvRS0DU1ZC/JBSR9BlchVkezt5q6Lw4EMKoHzAYHhatR4tE02csX1/sbzzzgxOQZgTv4UciTXyIh8=
   on:
-  	python: 2.7
+    python: 2.7
