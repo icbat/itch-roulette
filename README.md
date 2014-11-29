@@ -1,4 +1,4 @@
-scratch.io
+itch-roulette
 ==========
 
 [![Build Status](https://travis-ci.org/icbat/itch-roulette.svg?branch=master)](https://travis-ci.org/icbat/itch-roulette)
