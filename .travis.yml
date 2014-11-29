@@ -6,7 +6,8 @@ install: pip install -r requirements.txt
 script: nosetests
 deploy:
   provider: heroku
+  app: itch-roulette
   api_key:
-    secure: Z9Kc0aUQzqE7qZWDQWe2qEFRcJ3kq/+YO08JSJdBO4kL5eyc+b+BOqyk6JvTMzBd4BjlEpYhV5ijz1mOINO3+8OKk7wZgeKvRS0DU1ZC/JBSR9BlchVkezt5q6Lw4EMKoHzAYHhatR4tE02csX1/sbzzzgxOQZgTv4UciTXyIh8=
+    secure: cgPK3KH7WIFZCWutcCAAnf+v8YReVIXXSETQwc64WzG9ErL2CKj5ROFWM54vEqdOQgI/2vbinCgbkvgh9Hs0TLHxFt+A6djrQnXeY7atr3XtwQ9zfP/Qhadfcuu20sKJLYTJYZBysDS7pCTE2pdvTXU+om+UIGmekmhQwEL7fvE=
   on:
     python: 2.7
