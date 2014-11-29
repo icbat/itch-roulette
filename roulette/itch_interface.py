@@ -4,8 +4,15 @@ from game import Game
 
 prefix_length = len("https://") - 1
 
+sources = [
+"https://itch.io/games/price-500.xml"
+]
+
 def get_games():
-	return get_games_from_url("https://itch.io/games/price-500.xml")
+	games = []
+	for source in sources:
+		games += get_games_from_url(source)
+	return games
 
 def get_games_from_url(url):
 	page = urllib2.urlopen(url)
