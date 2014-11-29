@@ -1,4 +1,4 @@
-#!/usr/bin/python
+"""Super-basic server that serves a static page and handles requests to generate the 'buy' page """
 from settings import constants
 from roulette import roulette
 import argparse

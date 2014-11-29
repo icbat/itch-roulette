@@ -1,3 +1,7 @@
+""" 
+Handles integration with itch.io
+ """
+
 import urllib2
 import xml.etree.ElementTree as ET
 from game import Game
