@@ -36,12 +36,12 @@ def remove_duplicates(games):
 
 def get_games_from_url(url):
 	page = urllib2.urlopen(url)
-	return parse_xml(page)
+	raw_xml = page.read()	
+	return parse_xml(raw_xml)
 
 def parse_xml(page):
-	games_found = []
-	raw_xml = page.read()
-	root = ET.fromstring(raw_xml)
+	games_found = []	
+	root = ET.fromstring(page)
 	for item in root.findall('item'):
 		link = parse_one_value(item, "link")
 		user = parse_user(link)
