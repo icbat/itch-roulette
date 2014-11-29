@@ -11,3 +11,4 @@ deploy:
     secure: cgPK3KH7WIFZCWutcCAAnf+v8YReVIXXSETQwc64WzG9ErL2CKj5ROFWM54vEqdOQgI/2vbinCgbkvgh9Hs0TLHxFt+A6djrQnXeY7atr3XtwQ9zfP/Qhadfcuu20sKJLYTJYZBysDS7pCTE2pdvTXU+om+UIGmekmhQwEL7fvE=
   on:
     python: 2.7
+    repo: icbat/itch-roulette
