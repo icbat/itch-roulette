@@ -5,8 +5,17 @@ import roulette.itch_interface as itch_interface
 
 
 def test_remove_duplicates_happy():
-	assert False
+	games = []
+	first_game = Game("icbat", "pressing", "some currency", "1234", "display_name", "image url")
+	second_game = Game("icbat", "pressing", "some currency", "1234", "display_name", "image url")
+	games.append(first_game)
+	games.append(second_game)
+	assert len(games) == 2
 
+	trimmed = itch_interface.remove_duplicates(games)
 
-if __name__ == '__main__':
-	nose.main()
+	# assert no side-effects
+	assert len(games) == 2
+	assert len(trimmed) == 1
+	assert trimmed[0].user == "icbat"
+
